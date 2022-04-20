@@ -21,7 +21,16 @@ public class JiefuLing {
 	}
 	
 	public String getRotatedFullName(int shift) {
-		return "shit";
+		String str = "Jiefu Ling";
+		if (shift < 0) {
+			shift = -shift;
+			String result = str.substring(shift) + str.substring(0, shift);
+	        return result;
+		}
+		else {
+	        String result = str.substring(str.length() - shift) + str.substring(0, str.length() - shift);
+	        return result;
+		}
 	}
 
 }
